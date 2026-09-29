@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Simple Todo App</title>
+    <meta name="description" content="간단한 할 일 앱" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <script type="module" crossorigin src="/assets/index-BTJfgt5X.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-6Fh9nWF2.css">
+  </head>
+  <body>
+    <main class="app-shell" aria-label="할 일 앱">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Planner</p>
+          <h1>오늘의 할 일</h1>
+        </div>
+        <span id="taskCount" class="count-badge">0개 남음</span>
+      </header>
+
+      <section class="summary-card" aria-label="오늘의 요약">
+        <div>
+          <span class="summary-label">Focus</span>
+          <strong id="focusText">개발 작업 진행</strong>
+        </div>
+        <span class="summary-dot"></span>
+      </section>
+
+      <form id="todoForm" class="todo-form">
+        <input
+          id="todoInput"
+          type="text"
+          maxlength="80"
+          placeholder="오늘 할 일을 입력하세요"
+          aria-label="할 일 입력"
+        />
+        <button type="submit">추가</button>
+      </form>
+
+      <button id="installButton" type="button" class="install-btn" hidden>
+        홈 화면에 추가
+      </button>
+
+      <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+    </main>
+
+  </body>
+</html>
